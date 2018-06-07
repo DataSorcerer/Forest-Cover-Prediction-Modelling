@@ -1,0 +1,1 @@
+{"class":"org.apache.spark.ml.evaluation.MulticlassClassificationEvaluator","timestamp":1523203737861,"sparkVersion":"2.3.0","uid":"mcEval_29c0e8fa533c","paramMap":{"predictionCol":"Predicted_Cover_Type","metricName":"f1","labelCol":"Cover_Type"}}
