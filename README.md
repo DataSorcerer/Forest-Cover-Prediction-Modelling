@@ -1,9 +1,10 @@
 # Forest Cover Type prediction model using Spark ML
 
-This project makes use of a well-known Machine Learning dataset, *"Forest Cover Type*, that contains information about land covered by forests in the state of Colorado, USA. The dataset has been donated by Jock A. Blackard and Colorado State University and can be accessed at (UCI Machine Learning Datasets Archive-ForestCovType)[https://archive.ics.uci.edu/ml/datasets/covertype].   
+This project makes use of a well-known Machine Learning dataset, *"Forest Cover Type*, that contains information about land covered by forests in the state of Colorado, USA. The dataset has been donated by Jock A. Blackard and Colorado State University and can be accessed at [UCI Machine Learning Datasets Archive-ForestCovType](https://archive.ics.uci.edu/ml/datasets/covertype).   
       
-Why Spark and Scala for building the predictive model?    
-The peculiar relatively **"large scale"** characteristics of the dataset are more than 580,000 records and 54 features which can be used to predict the class - type of forest cover. These characteristics make it an ideal candidate to try large scale analytics framework like Spark with functional programming language like Scala.      
+### Why Spark and Scala for building the predictive model?   
+
+The (moderately) **"large scale"** characteristics of the dataset are:- more than 580,000 records and 54 features which can be used to predict the class - type of forest cover. These characteristics make it an ideal candidate to try large scale distributed analytics framework like Spark with functional programming language like Scala.      
 We train and tune a **scalable decision tree classifier** leveraging the following features of Spark architecture:    
 1. Highly parallelizable memory intensive data preprocessing: Allows the spark job to be distributed over multiple nodes in cluster.    
 2. Feature Engineering with Spark ML - VectorAssembler    
@@ -19,11 +20,11 @@ We train and tune a **scalable decision tree classifier** leveraging the followi
 (suggested running with at least 8GB of RAM)
 
 **Build:**   
-host> git clone https://github.com/DataSorcerer/Forest-Cover-Prediction-Modelling.git
-host> cd Forest-Cover-Prediction-Modelling
-host> sbt assembly
+host> git clone https://github.com/DataSorcerer/Forest-Cover-Prediction-Modelling.git    
+host> cd Forest-Cover-Prediction-Modelling    
+host> sbt assembly     
 
-This creates a fat jar ready to submitted to a Spark job:
+This creates a fat jar ready to submitted to a Spark job:    
 target/ForestModel.jar   
 
 **Deploy:**
